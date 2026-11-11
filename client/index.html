@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var cache = localStorage.getItem("crm_branding_cache");
+          if (cache) {
+            var data = JSON.parse(cache);
+            if (data && data.companyName && data.companyName.trim()) {
+              document.title = data.companyName.trim();
+            } else {
+              document.title = "Storra";
+            }
+            if (data && data.companyFavicon && data.companyFavicon.trim()) {
+              var existingIcons = document.querySelectorAll("link[rel*='icon']");
+              for (var i = 0; i < existingIcons.length; i++) {
+                existingIcons[i].parentNode.removeChild(existingIcons[i]);
+              }
+              var link = document.createElement("link");
+              link.id = "app-favicon";
+              link.rel = "icon";
+              link.href = data.companyFavicon.trim();
+              document.head.appendChild(link);
+            }
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link id="app-favicon" rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/vite.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Storra - Your premium online store." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Storra" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Alex+Brush&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Rozha+One&display=swap" rel="stylesheet">
+    <title>Storra</title>
+    <script type="module" crossorigin src="/assets/index-D4IFQ_bE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dqf3b3QA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

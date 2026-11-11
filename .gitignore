@@ -1,0 +1,67 @@
+# Node dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*.local
+.env.local
+.env.production
+.env.test
+
+# Build / output
+dist/
+build/
+public/build/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Process files
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Debug
+debug.log
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+uploads/
+*.zip
+
+# Database backups — contain raw customer data, never commit these
+backups/
+*.archive.gz
+
+# Chrome temporary test profiles
+chrome-profile*/
+scripts/chrome-profile*/
+
+# Scratch & local temp
+cookies.txt
+*.pdf
+_dev-server.log
